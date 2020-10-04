@@ -1,0 +1,30 @@
+*{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+#login-modal-window{
+  border: solid 1px ;
+  text-align: center;
+  width: 50%;
+  right: 50%;
+  transform: translateX(50%);
+  background: #7c72a0;
+}
+#login-modal-window > form > label > input{
+	border: solid 1px;
+	background: #6b6190;
+}
+#page-title{
+	text-align: center;
+	background: #7c238c;
+	height: 50px;
+}
+body{
+	background: #854798;
+	margin: 0;
+}
