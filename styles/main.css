@@ -7,7 +7,7 @@
 	vertical-align: baseline;
 	background: transparent;
 }
-#login-modal-window{
+.modal-window{
   border: solid 1px ;
   text-align: center;
   width: 50%;
@@ -15,7 +15,14 @@
   transform: translateX(50%);
   background: #7c72a0;
 }
-#login-modal-window > form > label > input{
+.modal-window > form > label > input{
+	border: solid 1px;
+	background: #6b6190;
+}
+.modal-window > form > label {
+	display: block;
+}
+.modal-window > form > button {
 	border: solid 1px;
 	background: #6b6190;
 }
