@@ -4,27 +4,85 @@
 	<title>Speedrunners Gaming</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 	<link rel="stylesheet" type="text/css" href="styles/main.css">
+	<link rel="stylesheet" type="text/css" href="styles/modal.css">
+	<link rel="stylesheet" type="text/css" href="styles/navbar.css">
 </head>
 <body>
-	<div id="page-title-container">
-		<div id="page-title">
-			<h1>Welcome to Speedrunners Gaming</h1>
-			<p>This will be the main landing page for our project</p>
+	<div>
+		<div id="page-title-container">
+			<div id="page-title">
+				<h1>Welcome to Speedrunners Gaming</h1>
+				<p>This will be the main landing page for our project</p>
+			</div>
+			<button id="login-modal-window-open">Click here to login/create an Account</button>
+		</div>
+
+		<div id="navbar-container">
+			<svg height="100" width="100" id="logo-svg" xmlns="http://www.w3.org/2000/svg">
+				<image href="imgs/logo.svg" id="logo" height="100" width="100" x="50%" y="50%" transform="translate(-50, -50)">
+			</svg>
+			<ul id="navbar-links-list">
+				<li><a href="">Home</a></li>
+				<li><a href="">About Us</a></li>
+				<li><a href="">Contact</a></li>
+				<li><a href="">My Account Info</a></li>
+				<li><a href="">Login/Sign out</a></li>
+			</ul>
+			<div id="searchbarContainer">
+				<input type="text" name="searchbar" placeholder="Search...">
+				<input type="image" alt ="Search site now" src="imgs/search.jpeg" id="searchSubmitButton">
+			</div>
+		</div>
+
+	</div>
+	<div id="current-view-game-list-container">
+		<h1 id="current-view-game-list-title"></h1>
+		<ul id="current-view-game-list">
+			<li>
+				<div>
+					<img src="#" alt='game-image'>
+					<span>Game Title</span>
+				</div>
+			</li>
+			<li>
+				<div>
+					<img src="#" alt='game-image'>
+					<span>Game Title</span>
+				</div>
+			</li>
+			<li>
+				<div>
+					<img src="#" alt='game-image'>
+					<span>Game Title</span>
+				</div>
+			</li>
+			<li>
+				<div>
+					<img src="#" alt='game-image'>
+					<span>Game Title</span>
+				</div>
+			</li>
+		</ul>
+	</div>
+	
+	<div id="login-modal-window" class="modal-window">
+		<!--this should appear as a pop-up modal window over the main landing page-->
+		<div class="modal-content">
+			<h2>Login Form</h2>
+			<span class="modal-close">&times</span>
+			<form>
+				<label for="username">Username or Email:
+					<input type="text" name="username">
+				</label>
+				<label for="password">Password:
+					<input type="password" name="password">
+				</label>
+				<button type="submit">Log In!</button>
+			</form>
+			<p>Not yet a member? <a href="accountCreate.html">Click Here to Create an Account</a></p>
 		</div>
 	</div>
 
-	<div id="login-modal-window" class="modal-window">
-		<h2>Login Form</h2>
-		<form>
-			<label for="username">Username or Email:
-				<input type="text" name="username">
-			</label>
-			<label for="password">Password:
-				<input type="password" name="password">
-			</label>
-			<button type="submit">Log In!</button>
-		</form>
-		<p>Not yet a member? <a href="accountCreate.html">Click Here to Create an Account</a></p>
-	</div>
+	<script type="text/javascript" src="scripts/modalScript.js"></script>
 </body>
 </html>

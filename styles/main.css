@@ -1,3 +1,7 @@
+:root {
+	--main-color: #854798;
+	--secondary-color: #7c238c;
+}
 *{
 	margin: 0;
 	padding: 0;
@@ -7,31 +11,30 @@
 	vertical-align: baseline;
 	background: transparent;
 }
-.modal-window{
-  border: solid 1px ;
-  text-align: center;
-  width: 50%;
-  right: 50%;
-  transform: translateX(50%);
-  background: #7c72a0;
-}
-.modal-window > form > label > input{
-	border: solid 1px;
-	background: #6b6190;
-}
-.modal-window > form > label {
-	display: block;
-}
-.modal-window > form > button {
-	border: solid 1px;
-	background: #6b6190;
-}
+
 #page-title{
 	text-align: center;
-	background: #7c238c;
-	height: 50px;
+}
+#page-title-container{
+  background-color: var(--secondary-color);
+	position: relative;
+}
+#login-modal-window-open{
+	right: 0;
+	bottom: 0;
+	position: absolute;
+	background-color: var(--secondary-color);
+	height: 100%;
+	color: var(--main-color);
+	border-style: solid;
+	border-width: 0px 0px 5px 5px;
+	border-color: var(--main-color);
+}
+#login-modal-window-open:hover, #login-modal-window-open:focus{
+	background-color: var(--main-color);
+	color: var(--secondary-color);
 }
 body{
-	background: #854798;
-	margin: 0;
+	background-color: var(--main-color);
+	height: 100%;
 }
