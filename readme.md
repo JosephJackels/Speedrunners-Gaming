@@ -1,6 +1,6 @@
 # Speedrunners Gaming Webapp Project
 
-##About
+## About
 
 This app is being created as a part of a project for the ICS325 class at metrostate University.
 It is a group project with work being done by:
