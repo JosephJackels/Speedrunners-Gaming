@@ -1,0 +1,81 @@
+:root {
+	--main-color: #854798;
+	--secondary-color: #7c238c;
+
+	--main-color-filter: brightness(0) saturate(100%) invert(36%) sepia(25%) saturate(1290%) hue-rotate(241deg) brightness(91%) contrast(92%);
+	--secondary-color-filter: brightness(0) saturate(100%) invert(19%) sepia(67%) saturate(1867%) hue-rotate(268deg) brightness(98%) contrast(103%);
+	/* if colors are changed filters must be updated*/
+	/* filters calculated using https://codepen.io/sosuke/pen/Pjoqqp*/
+	/*filters used to set color of svg images*/
+}
+#navbar-container {
+	font-size: 0px;
+	height: 100px;
+	display: flex;
+}
+#navbar-container > * {
+	font-size: initial;
+}
+#navbar-links-list {
+	font-size: 0;
+	background-color: var(--main-color);
+	height: 100%;
+	display: inline-flex;
+	align-items: stretch;
+}
+#navbar-links-list > li {
+	font-size: initial;
+	text-align: center;
+	flex: 1;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+}
+#navbar-links-list > li > a {
+	text-decoration: none;
+	color: var(--secondary-color);
+}
+#navbar-links-list > li:hover {
+	background-color: var(--secondary-color);
+}
+#navbar-links-list > li:hover a {
+	color: var(--main-color);
+}
+#navbar-container > svg{
+	display: inline-block;
+	flex: 1;
+	box-sizing: border-box;
+	border: solid var(--secondary-color) 2px;
+	vertical-align: top;
+}
+#logo {
+	filter: var(--secondary-color-filter);
+}
+#logo-svg:hover #logo{
+	filter: var(--main-color-filter);
+}
+#logo-svg:hover {
+	background-color: var(--secondary-color);
+}
+#navbar-container > ul{
+	flex: 2;
+	box-sizing: border-box;
+	border: solid var(--secondary-color) 2px;
+}
+ #navbar-container > #searchbarContainer{
+ 	display: inline-flex;
+ 	flex: 1;
+ 	box-sizing: border-box;
+ 	border: solid var(--secondary-color) 2px;
+	background-color: var(--secondary-color);
+	align-items: flex-end;
+}
+#searchbarContainer > input {
+	background-color: var(--main-color);
+	border: solid;
+	flex: 20;
+}
+#searchbarContainer > #searchSubmitButton {
+	flex: 1;
+	
+}

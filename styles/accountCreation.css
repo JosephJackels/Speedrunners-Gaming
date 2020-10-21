@@ -1,0 +1,14 @@
+#account-creation-container {
+	width: 50%;
+	margin: auto;
+	border: solid 2px;
+}
+#account-creation-container > form > label, #account-creation-container > form > div {
+	border-style: solid; 
+	border-width: 0px 0px 2px 0px; black;
+	display: block;
+	width: 100%;
+}
+#account-creation-container > form > div#address-input-container {
+	display: flex;
+}
