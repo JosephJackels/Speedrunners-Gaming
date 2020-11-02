@@ -1,4 +1,4 @@
-# Speedrunners Gaming Webapp Project
+# Speedrunners Gaming Web App Project
 
 ## About
 
@@ -16,7 +16,7 @@ This project utilizes:
 * PHP
 * MySQL
 
-##TODO
+## TODO
 
 - [ ] Implement Test Database
 	- [ ] Game Table (a list of all games available - each game once)
