@@ -1,6 +1,23 @@
 :root {
-	--main-color: #854798;
-	--secondary-color: #7c238c;
+	--accent-light-color: #854798;
+	--accent-color: #7c238c;
+	--base-dark-color: #4c424f;
+	--base-light-color: #e9e1eb;
+
+	--accent-light-color-filter: brightness(0) saturate(100%) invert(36%) sepia(25%) saturate(1290%) hue-rotate(241deg) brightness(91%) contrast(92%);
+	--accent-color-filter: brightness(0) saturate(100%) invert(19%) sepia(67%) saturate(1867%) hue-rotate(268deg) brightness(98%) contrast(103%);
+	--base-dark-color-filter: brightness(0) saturate(100%) invert(24%) sepia(23%) saturate(357%) hue-rotate(241deg) brightness(91%) contrast(83%);
+	--base-light-color-filter: brightness(0) saturate(100%) invert(88%) sepia(21%) saturate(88%) hue-rotate(239deg) brightness(105%) contrast(84%);
+	/*
+		if colors are changed filters must be updated
+		filters calculated using https://codepen.io/sosuke/pen/Pjoqqp
+		filters used to set color of svg images
+
+		***
+		Prepend each filter with "brightness(0) saturate(100%)"
+		so that any image will first be set to completely black, ensuring image colors are filtered properly
+		***
+	*/
 }
 *{
 	margin: 0;
@@ -11,30 +28,41 @@
 	vertical-align: baseline;
 	background: transparent;
 }
-
+#page-header{
+	position: fixed;
+	top: 0;
+	width: 100%;
+	border-bottom: solid 4px;
+	border-color: var(--base-light-color);
+}
+#page-header + *{
+	padding-top: 210px;
+}
 #page-title{
 	text-align: center;
+	color: var(--base-light-color);
 }
 #page-title-container{
-  background-color: var(--secondary-color);
+  background-color: var(--base-dark-color);
 	position: relative;
+	height: 100px;
 }
 #login-modal-window-open{
 	right: 0;
-	bottom: 0;
+	top: 0;
 	position: absolute;
-	background-color: var(--secondary-color);
-	height: 100%;
-	color: var(--main-color);
-	border-style: solid;
+	background-color: var(--base-dark-color);
+	height: 50%;
+	color: var(--base-light-color);
+	padding: 10px;
+  border-style: solid;
 	border-width: 0px 0px 5px 5px;
-	border-color: var(--main-color);
+	border-color: var(--base-light-color)' 
 }
 #login-modal-window-open:hover, #login-modal-window-open:focus{
-	background-color: var(--main-color);
-	color: var(--secondary-color);
+	background-color: var(--accent-color);
 }
 body{
-	background-color: var(--main-color);
+	background-color: var(--accent-light-color);
 	height: 100%;
 }

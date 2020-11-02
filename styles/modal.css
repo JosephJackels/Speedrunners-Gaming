@@ -1,26 +1,72 @@
+:root {
+  --accent-light-color: #854798;
+  --accent-color: #7c238c;
+  --base-dark-color: #4c424f;
+  --base-light-color: #e9e1eb;
+
+  --accent-light-color-filter: brightness(0) saturate(100%) invert(36%) sepia(25%) saturate(1290%) hue-rotate(241deg) brightness(91%) contrast(92%);
+  --accent-color-filter: brightness(0) saturate(100%) invert(19%) sepia(67%) saturate(1867%) hue-rotate(268deg) brightness(98%) contrast(103%);
+  --base-dark-color-filter: brightness(0) saturate(100%) invert(24%) sepia(23%) saturate(357%) hue-rotate(241deg) brightness(91%) contrast(83%);
+  --base-light-color-filter: brightness(0) saturate(100%) invert(88%) sepia(21%) saturate(88%) hue-rotate(239deg) brightness(105%) contrast(84%);
+  /*
+    if colors are changed filters must be updated
+    filters calculated using https://codepen.io/sosuke/pen/Pjoqqp
+    filters used to set color of svg images
+
+    ***
+    Prepend each filter with "brightness(0) saturate(100%)"
+    so that any image will first be set to completely black, ensuring image colors are filtered properly
+    ***
+  */
+}
 .modal-window{
-  border: solid 1px;
   position: fixed;
   z-index: 1;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 55%;
+  height: 80%;
   text-align: center;
-  background: #7c72a0;
+  background-color: var(--base-dark-color);
+  border: solid 3px var(--base-light-color);
 }
 
 .modal-content {
-  margin: 15% auto;
-  border: 1px solid;
-  width: 80%;
+  height: 100%;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
-
+.modal-content > h2 {
+  flex: 1;
+  color: var(--base-light-color);
+}
+.modal-form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;;
+}
+.modal-form-inputs{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.modal-content > p {
+  flex: 1;
+  color: var(--base-light-color);
+}
+.modal-content > p > a {
+  color: var(--accent-light-color);
+}
 .modal-close {
   position: absolute;
   right: 0;
   top: 0;
+  color: var(--base-light-color);
 }
 
 .modal-close:hover, .modal-close:focus {
@@ -29,14 +75,24 @@
 #login-modal-window-open:hover, #login-modal-window-open:focus{
 	cursor: pointer;
 }
-.modal-window > .modal-content > form > label > input{
-	border: solid 1px;
-	background: #6b6190;
+.modal-form > button:hover, .modal-form > button:focus {
+  cursor: pointer;
 }
-.modal-window > .modal-content > form > label {
-	display: block;
+.modal-form-input-container > input{
+	border: solid 1px var(--accent-color);
+	background-color: var(--accent-light-color);
+  flex: 1;
+  color: var(--accent-color);
 }
-.modal-window > .modal-content > form > button {
-	border: solid 1px;
-	background: #6b6190;
+.modal-form-input-container > label {
+  color: var(--base-light-color);
+}
+.modal-form-input-container {
+	display: flex;
+  width: 100%;
+}
+.modal-form > button {
+	border: solid 1px var(--accent-color);
+	background-color: var(--accent-light-color);
+  color: var(--accent-color);
 }

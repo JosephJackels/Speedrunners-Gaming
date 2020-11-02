@@ -1,0 +1,56 @@
+:root {
+  --accent-light-color: #854798;
+  --accent-color: #7c238c;
+  --base-dark-color: #4c424f;
+  --base-light-color: #e9e1eb;
+
+  --accent-light-color-filter: brightness(0) saturate(100%) invert(36%) sepia(25%) saturate(1290%) hue-rotate(241deg) brightness(91%) contrast(92%);
+  --accent-color-filter: brightness(0) saturate(100%) invert(19%) sepia(67%) saturate(1867%) hue-rotate(268deg) brightness(98%) contrast(103%);
+  --base-dark-color-filter: brightness(0) saturate(100%) invert(24%) sepia(23%) saturate(357%) hue-rotate(241deg) brightness(91%) contrast(83%);
+  --base-light-color-filter: brightness(0) saturate(100%) invert(88%) sepia(21%) saturate(88%) hue-rotate(239deg) brightness(105%) contrast(84%);
+  /*
+    if colors are changed filters must be updated
+    filters calculated using https://codepen.io/sosuke/pen/Pjoqqp
+    filters used to set color of svg images
+
+    ***
+    Prepend each filter with "brightness(0) saturate(100%)"
+    so that any image will first be set to completely black, ensuring image colors are filtered properly
+    ***
+  */
+}
+
+#game-lists-container{
+  display: flex;
+  flex-direction: column;
+}
+.game-list-container{
+  flex: 1;
+}
+.game-list{
+  display: flex;
+  flex-direction: row;
+  overflow: auto;
+  flex: 1;
+  min-height: 250px;
+}
+.game-container {
+  flex: 1  1 500px;
+  list-style-type: none;
+  border: solid 2px var(--accent-color);
+  min-width: 500px;
+  display: flex;
+}
+.game-img {
+  flex: 5;
+  background-color: var(--base-dark-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.game-info-container{
+  flex:2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}

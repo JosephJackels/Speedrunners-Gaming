@@ -1,0 +1,40 @@
+#page-body {
+	height: 50vh;
+	display: flex;
+	justify-content: center;
+}
+.account-info-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 100%;
+	justify-content: space-between;
+	border: solid black 2px;
+	width: 55vw;
+}
+
+.account-info-values {
+	display: flex;
+	flex-direction: column;
+	width: 60%;
+}
+.account-info-container button {
+	border: solid 1px;
+	background-color: #778899;
+}
+.account-info-container button:hover, .account-info-container button:focus {
+	cursor: pointer;
+}
+.value-item {
+	display: flex;
+	flex-direction: row;
+}
+.value-label{
+	flex: 1 1 0px;
+}
+.value-value {
+	flex: 1 1 0px;
+}
+.value-value-edit {
+	color: #FF0000;
+}

@@ -1,0 +1,23 @@
+#contact-form {
+	width: 50%;
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	border: solid black 2px;
+}
+#contact-form > label {
+	flex: 1;
+}
+#contact-form > .input-container{
+	flex: 4;
+}
+.input-container > * {
+	width: 80%;
+	border: solid black 2px;
+	position: relative;
+	right: 50%;
+	transform: translateX(75%);
+}
+.input-container > textarea {
+	min-height: 50vh;
+}

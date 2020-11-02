@@ -1,12 +1,23 @@
 :root {
-	--main-color: #854798;
-	--secondary-color: #7c238c;
+	--accent-light-color: #854798;
+	--accent-color: #7c238c;
+	--base-dark-color: #4c424f;
+	--base-light-color: #e9e1eb;
 
-	--main-color-filter: brightness(0) saturate(100%) invert(36%) sepia(25%) saturate(1290%) hue-rotate(241deg) brightness(91%) contrast(92%);
-	--secondary-color-filter: brightness(0) saturate(100%) invert(19%) sepia(67%) saturate(1867%) hue-rotate(268deg) brightness(98%) contrast(103%);
-	/* if colors are changed filters must be updated*/
-	/* filters calculated using https://codepen.io/sosuke/pen/Pjoqqp*/
-	/*filters used to set color of svg images*/
+	--accent-light-color-filter: brightness(0) saturate(100%) invert(36%) sepia(25%) saturate(1290%) hue-rotate(241deg) brightness(91%) contrast(92%);
+	--accent-color-filter: brightness(0) saturate(100%) invert(19%) sepia(67%) saturate(1867%) hue-rotate(268deg) brightness(98%) contrast(103%);
+	--base-dark-color-filter: brightness(0) saturate(100%) invert(24%) sepia(23%) saturate(357%) hue-rotate(241deg) brightness(91%) contrast(83%);
+	--base-light-color-filter: brightness(0) saturate(100%) invert(88%) sepia(21%) saturate(88%) hue-rotate(239deg) brightness(105%) contrast(84%);
+	/*
+		if colors are changed filters must be updated
+		filters calculated using https://codepen.io/sosuke/pen/Pjoqqp
+		filters used to set color of svg images
+
+		***
+		Prepend each filter with "brightness(0) saturate(100%)"
+		so that any image will first be set to completely black, ensuring image colors are filtered properly
+		***
+	*/
 }
 #navbar-container {
 	font-size: 0px;
@@ -18,7 +29,7 @@
 }
 #navbar-links-list {
 	font-size: 0;
-	background-color: var(--main-color);
+	background-color: var(--base-dark-color);
 	height: 100%;
 	display: inline-flex;
 	align-items: stretch;
@@ -27,55 +38,66 @@
 	font-size: initial;
 	text-align: center;
 	flex: 1;
-	display: inline-flex;
-	align-items: center;
+	display: flex;
+	align-items: stretch;
 	justify-content: center;
 }
 #navbar-links-list > li > a {
+	flex: 1;
 	text-decoration: none;
-	color: var(--secondary-color);
+	color: var(--base-light-color);
+	
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 #navbar-links-list > li:hover {
-	background-color: var(--secondary-color);
+	background-color: var(--accent-color);
 }
 #navbar-links-list > li:hover a {
-	color: var(--main-color);
+	
+}
+#navbar-links-list > li.current {
+	background-color: var(--accent-color);
+}
+#navbar-links-list > li.current > a{
+	
 }
 #navbar-container > svg{
 	display: inline-block;
 	flex: 1;
 	box-sizing: border-box;
-	border: solid var(--secondary-color) 2px;
 	vertical-align: top;
+	background-color: var(--base-dark-color);
 }
 #logo {
-	filter: var(--secondary-color-filter);
+	filter: var(--base-light-color-filter);
 }
 #logo-svg:hover #logo{
-	filter: var(--main-color-filter);
+	
 }
 #logo-svg:hover {
-	background-color: var(--secondary-color);
+	background-color: var(--accent-color);
 }
 #navbar-container > ul{
 	flex: 2;
 	box-sizing: border-box;
-	border: solid var(--secondary-color) 2px;
 }
  #navbar-container > #searchbarContainer{
  	display: inline-flex;
  	flex: 1;
  	box-sizing: border-box;
- 	border: solid var(--secondary-color) 2px;
-	background-color: var(--secondary-color);
+ 	border: solid var(--base-dark-color) 2px;
+	background-color: var(--base-dark-color);
 	align-items: flex-end;
 }
 #searchbarContainer > input {
-	background-color: var(--main-color);
-	border: solid;
+	background-color: var(--accent-light-color);
+	border: solid var(--accent-color);
+	color: var(--accent-color);
 	flex: 20;
 }
 #searchbarContainer > #searchSubmitButton {
 	flex: 1;
-	
+	height: 19px;
 }
