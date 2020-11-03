@@ -1,5 +1,5 @@
 <?php  
-		$output = <<<EOD
+		$output = <<<HEREDOC
 			<div id="navbar-container">
 				<svg height="100" width="100" id="logo-svg" xmlns="http://www.w3.org/2000/svg">
 					<image href="imgs/logo.svg" id="logo" height="100" width="100" x="50%" y="50%" transform="translate(-50, -50)"></image>
@@ -16,7 +16,6 @@
 				</div>
 			</div>
 			<script type="text/javascript" src="scripts/navbar.js"></script>
-		EOD;
-
+HEREDOC;
 		echo $output;
 ?>

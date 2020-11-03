@@ -25,22 +25,23 @@
 	</div>
 	<div id="page-body">
 		<div id="account-creation-container">
-			<form>
+			<form autocomplete="off">
 				<label for="fname">First Name:
-					<input type="text" name="fname" placeholder="John" required>
+					<input type="text" name="fname" placeholder="John" required pattern="[A-Za-z]+">
 				</label>
 				<label for="lname">Last Name:
-					<input type="text" name="lname" placeholder="Smith" required>
+					<input type="text" name="lname" placeholder="Smith" required pattern="[A-Za-z]+">
 				</label>
 				<label for="email">Email Address:
 					<input type="email" name="email" placeholder="john.smith@email.com" required>
 				</label>
 				<div id="address-input-container">	
 					<label for="address">Mailing Address:
-						<input type="text" name="address" placeholder="1234 Real Street" required>
+						<input type="text" name="address" placeholder="1234 Real Street" required pattern="[0-9]+\s(([0-9]+(st|nd|rd|th))|([A-Za-z]+))\s[A-Za-z]+(/s([Nn][EeWw]?|[Ss][EeWw]?|[Ee]|[Ww]|[Nn]orth(\s?(([Ww]est)|([Ee]ast)))?|[Ss]outh(\s?(([Ww]est)|([Ee]ast)))?|[Ee]ast|[Ww]est))?">
+						<!-- This Regex needs to be fixed-->
 					</label>
 					<label for="zip">ZIP/Postal Code:
-						<input type="text" name="zip" placeholder="12345" required>
+						<input type="text" name="zip" placeholder="12345" required pattern="[0-9]{5}([-. ]?[0-9]{5})?">
 					</label>
 					<label for="state">State:
 						<select name='state' size='1' autocomplete="off" required>
@@ -113,6 +114,12 @@
 				<label for="birthdate">Birth Date
 					<input type="date" name="birthdate" required>
 				</label>
+				<label for='password'>Password
+					<input type="password" name="password" id="password-input" oninput="checkPasswordInput(this)">
+				</label>
+				<label for="repeatPassword">Confirm Password
+					<input type="password" name="repeatPassword" id="password-confirm-input" oninput="checkPasswordInput(this)">
+				</label>
 				<button type="submit">Create Account</button>
 			</form>
 		</div>
@@ -120,5 +127,16 @@
 
 	<!-- This window exists outside of the main body, should only be seen as a popup window-->
 	<?php include 'pageParts/loginModal.php'; ?>
+	<?php include 'pageParts/sourcesFooter.php';?>
+
+	<script type="text/javascript">
+		function checkPasswordInput(input) {
+			if(document.getElementById('password-confirm-input').value != document.getElementById('password-input').value){
+				document.getElementById('password-confirm-input').setCustomValidity('Passwords do not match');
+			} else {
+				document.getElementById('password-confirm-input').setCustomValidity('');
+			}
+		}
+	</script>
 </body>
 </html>

@@ -39,5 +39,6 @@
 	</div>
 
 	<?php include 'pageParts/loginModal.php'; ?>
+	<?php include 'pageParts/sourcesFooter.php';?>
 </body>
 </html>

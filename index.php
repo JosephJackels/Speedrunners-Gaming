@@ -1,6 +1,9 @@
 <?php
 	$gameCategories = getCategories();
 	$gameListByCategory;
+	ini_set('display_errors', 1);
+	ini_set('display_startup_errors', 1);
+	error_reporting(E_ALL);
 	/*
 		gameCategories will be setup as a list of all available catageories, 
 		i.e. [cat0, cat1, cat2, cat3...]
@@ -57,9 +60,7 @@
 			<button id="login-modal-window-open" onclick="getElementById('login-modal-window').style.display = 'block';">Click here to login/create an Account</button>
 		</div>
 
-		<?php 
-			include 'pageParts/navbar.php'; 
-		?>
+		<?php include "pageParts/navbar.php";?>
 	</div>
 
 	<!-- Once the database has been implemented thes containers will be filled via php and queries to the database-->
@@ -73,7 +74,7 @@
 
 						foreach ($gameListByCategory[$categoryValue] as $key => $gameValue) {
 							echo "<li class='game-container'>";
-								echo "<img class='game-img' src='#' alt='" . getGameImage($gameValue) . "'>";
+								echo "<a href='gameInfo.php?gameId=$gameValue' class='game-img'><img src='#' alt='" . getGameImage($gameValue) . "'></a>";
 								echo "<div class='game-info-container'>";
 									echo "<span class='game-title'>" . getGameTitle($gameValue) . "</span>";
 									echo "<span class='game-rating'>" . getGameRating($gameValue) . "</span>";
@@ -91,5 +92,6 @@
 
 	<!-- This window exists outside of the main body, should only be seen as a popup window-->
 	<?php include 'pageParts/loginModal.php';?>
+	<?php include 'pageParts/sourcesFooter.php';?>
 </body>
 </html>

@@ -1,5 +1,5 @@
 <?php 
-	$output = <<<'EOD'
+	$output = <<<HEREDOC
 	<div id="login-modal-window" class="modal-window">
 		<div class="modal-content">
 			<h2>Login Form</h2>
@@ -7,8 +7,8 @@
 			<form class="modal-form">
 				<div class="modal-form-inputs">
 					<div class="modal-form-input-container">
-						<label for="username">Username or Email:</label>
-						<input type="text" name="username">
+						<label for="username">Email:</label>
+						<input type="email" name="username">
 					</div>
 					<div class="modal-form-input-container">
 						<label for="password">Password:</label>
@@ -20,6 +20,6 @@
 			<p>Not yet a member? <a href="accountCreation.php">Click Here to Create an Account</a></p>
 		</div>
 	</div>
-	EOD;
+HEREDOC;
 	echo $output;
 ?>

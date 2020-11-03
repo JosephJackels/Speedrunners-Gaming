@@ -32,7 +32,7 @@
 
 	<!-- This window exists outside of the main body, should only be seen as a popup window-->
 	<?php include 'pageParts/loginModal.php';?>
-
+	<?php include 'pageParts/sourcesFooter.php';?>
 	<!-- ADD ANY PAGE SPECFIC SCRIPTS HERE-->
 </body>
 </html>
