@@ -38,10 +38,12 @@ This project utilizes:
 - [ ] Main Page
 	- [ ] Search functionality
 	- [ ] Make login window only pop up if not logged in? AND/OR only on main page?
+		- [x]Not pop up immediately
+		- [ ]Check if logged in or not
 	- [ ] Improve Color Scheme?
 		- [ ] contrast
 		- [ ] light/dark mode
-		- [ ] improved general color theme
+		- [ ] improve general color theme
 		- [ ] accent colors 'pop' without being distracting
 	- [ ] Game lists
 		- [ ] scroll when swiped?
@@ -50,24 +52,63 @@ This project utilizes:
 
 - [ ] 'About Us' page
 	- [ ] Create 'real' Content
-	- [ ] Update Styling
+	- [x] Update Styling
 
 - [ ] Contact Page
-	- [ ] Update Styling
-		- [ ] Page Body Appearance
-		- [ ] Positioning of labels and buttons
-	- [ ] Form Input Handling
-		- [ ] Check for Empty/invalid inputs
+	- [x] Update Styling
+		- [x] Page Body Appearance
+		- [x] Positioning of labels and buttons
+	- [x] Form Input Handling
+		- [x] Check for Empty/invalid inputs
 	- [ ] Form Output Processing
 		- [ ] make a basic 'show output' page for testing
 		- [ ] make a new table in database for handling/processing?
+		- [ ] check for injections etc. safe form handling!!!
 
 - [ ] My Account Page
-	- [ ] Styling
-		- [ ] Form Inputs
-			- [ ] color
-			- [ ] positioning
-			- [ ] borders
-		- [ ] Improved button styling
+	- [x] Styling
+		- [x] Form Inputs
+			- [x] color
+			- [x] positioning
+			- [x] borders
+		- [x] Improved button styling
 	-Form Input Handling
 		- [ ] Proper input check - empty, invalid etc.
+			- [x] First Name
+			- [x] Last Name
+			- [x] Email
+			- [ ] Mailing Address
+				- [ ] Parse address number
+				- [ ] Parse Streetname
+				- [ ] Parse Street Type
+				- [ ] Parse Street modifier (ex 7th Street North, North 7th Street etc.)
+				- [ ] Parse City Name
+				- [ ] Parse Zip
+				- [ ] Add State Selection input
+				- [ ] Split address inputs into Address, City, Zip, State
+			- [x] Birth Date
+
+- [ ] Account Creation Page
+	- [x] Styling
+	- [ ] Form Input Handling
+		- [ ] Mailing Address regex needs improvement/fixing
+
+- [ ] Admin Pages
+	- [ ] Edit/Add/Remove Employee Page
+		- [ ] Structure
+		- [ ] Style
+		- [ ] Functionality
+			- [ ] Form Handling
+			- [ ] Integrate with database
+	- [ ] Orders and Deliveries Page
+		- [ ] Structure
+		- [ ] Style
+		- [ ] Functionality
+			- [ ] Form Handling
+			- [ ] Integrate with database
+	- [ ] Edit/Add/Remove Game Page
+		- [ ] Structure
+		- [ ] Style
+		- [ ] Functionality
+			- [ ] Form Handling
+			- [ ] Integrate with database
