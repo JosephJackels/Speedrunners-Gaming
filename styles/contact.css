@@ -1,23 +1,59 @@
+:root {
+	--accent-light-color: #854798;
+	--accent-color: #7c238c;
+	--base-dark-color: #4c424f;
+	--base-light-color: #e9e1eb;
+
+	--accent-light-color-filter: brightness(0) saturate(100%) invert(36%) sepia(25%) saturate(1290%) hue-rotate(241deg) brightness(91%) contrast(92%);
+	--accent-color-filter: brightness(0) saturate(100%) invert(19%) sepia(67%) saturate(1867%) hue-rotate(268deg) brightness(98%) contrast(103%);
+	--base-dark-color-filter: brightness(0) saturate(100%) invert(24%) sepia(23%) saturate(357%) hue-rotate(241deg) brightness(91%) contrast(83%);
+	--base-light-color-filter: brightness(0) saturate(100%) invert(88%) sepia(21%) saturate(88%) hue-rotate(239deg) brightness(105%) contrast(84%);
+	/*
+		if colors are changed filters must be updated
+		filters calculated using https://codepen.io/sosuke/pen/Pjoqqp
+		filters used to set color of svg images
+
+		***
+		Prepend each filter with "brightness(0) saturate(100%)"
+		so that any image will first be set to completely black, ensuring image colors are filtered properly
+		***
+	*/
+}
 #contact-form {
 	width: 50%;
+	min-height: 75vh;
 	margin: auto;
 	display: flex;
 	flex-direction: column;
-	border: solid black 2px;
+	border: solid var(--base-light-color) 2px;
+	align-items: stretch;
+	justify-content: space-between;
+	background-color: var(--base-dark-color);
 }
 #contact-form > label {
-	flex: 1;
+	display: flex;
+	justify-content: center;
+	color: var(--base-light-color);
 }
-#contact-form > .input-container{
-	flex: 4;
+#contact-form > .input-container, #contact-form > .form-controls{
+	display: flex;
+	justify-content: center;
 }
 .input-container > * {
-	width: 80%;
-	border: solid black 2px;
-	position: relative;
-	right: 50%;
-	transform: translateX(75%);
+	border: solid var(--accent-color) 2px;
+	background-color: var(--accent-light-color);
+	color: var(--accent-color);
+	width: 75%;
 }
 .input-container > textarea {
 	min-height: 50vh;
+}
+.form-controls > button{
+	border: solid var(--accent-color) 2px;
+	background-color: var(--accent-light-color);
+	color: var(--accent-color);
+	margin: 5px;
+}
+.form-controls > button:hover, .form-controls> button:focus{
+	cursor: pointer;
 }

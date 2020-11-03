@@ -21,7 +21,7 @@
 }
 .modal-window{
   position: fixed;
-  z-index: 1;
+  z-index: 2;
   left: 50%;
   top: 50%;
   transform: translateX(-50%) translateY(-50%);
@@ -30,6 +30,7 @@
   text-align: center;
   background-color: var(--base-dark-color);
   border: solid 3px var(--base-light-color);
+  display: none;
 }
 
 .modal-content {

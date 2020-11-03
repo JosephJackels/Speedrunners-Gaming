@@ -34,6 +34,10 @@
 	width: 100%;
 	border-bottom: solid 4px;
 	border-color: var(--base-light-color);
+	z-index: 1;
+}
+#page-body {
+	z-index: 0;
 }
 #page-header + *{
 	padding-top: 210px;
@@ -57,7 +61,7 @@
 	padding: 10px;
   border-style: solid;
 	border-width: 0px 0px 5px 5px;
-	border-color: var(--base-light-color)' 
+	border-color: var(--base-light-color);
 }
 #login-modal-window-open:hover, #login-modal-window-open:focus{
 	background-color: var(--accent-color);
@@ -65,4 +69,9 @@
 body{
 	background-color: var(--accent-light-color);
 	height: 100%;
+}
+footer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
