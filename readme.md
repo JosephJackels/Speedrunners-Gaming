@@ -38,8 +38,8 @@ This project utilizes:
 - [ ] Main Page
 	- [ ] Search functionality
 	- [ ] Make login window only pop up if not logged in? AND/OR only on main page?
-		- [x]Not pop up immediately
-		- [ ]Check if logged in or not
+		- [x] ~~Not pop up immediately~~
+		- [ ] Check if logged in or not
 	- [ ] Improve Color Scheme?
 		- [ ] contrast
 		- [ ] light/dark mode
@@ -52,31 +52,31 @@ This project utilizes:
 
 - [ ] 'About Us' page
 	- [ ] Create 'real' Content
-	- [x] Update Styling
+	- [x] ~~Update Styling~~
 
 - [ ] Contact Page
-	- [x] Update Styling
-		- [x] Page Body Appearance
-		- [x] Positioning of labels and buttons
-	- [x] Form Input Handling
-		- [x] Check for Empty/invalid inputs
+	- [x] ~~Update Styling~~
+		- [x] ~~Page Body Appearance~~
+		- [x] ~~Positioning of labels and buttons~~
+	- [x] ~~Form Input Handling~~
+		- [x] ~~Check for Empty/invalid inputs~~
 	- [ ] Form Output Processing
 		- [ ] make a basic 'show output' page for testing
 		- [ ] make a new table in database for handling/processing?
 		- [ ] check for injections etc. safe form handling!!!
 
 - [ ] My Account Page
-	- [x] Styling
-		- [x] Form Inputs
-			- [x] color
-			- [x] positioning
-			- [x] borders
-		- [x] Improved button styling
+	- [x] ~~Styling~~
+		- [x] ~~Form Inputs~~
+			- [x] ~~color~~
+			- [x] ~~positioning~~
+			- [x] ~~borders~~
+		- [x] ~~Improved button styling~~
 	-Form Input Handling
 		- [ ] Proper input check - empty, invalid etc.
-			- [x] First Name
-			- [x] Last Name
-			- [x] Email
+			- [x] ~~First Name~~
+			- [x] ~~Last Name~~
+			- [x] ~~Email~~
 			- [ ] Mailing Address
 				- [ ] Parse address number
 				- [ ] Parse Streetname
@@ -86,10 +86,10 @@ This project utilizes:
 				- [ ] Parse Zip
 				- [ ] Add State Selection input
 				- [ ] Split address inputs into Address, City, Zip, State
-			- [x] Birth Date
+			- [x] ~~Birth Date~~
 
 - [ ] Account Creation Page
-	- [x] Styling
+	- [x] ~~Styling~~
 	- [ ] Form Input Handling
 		- [ ] Mailing Address regex needs improvement/fixing
 
