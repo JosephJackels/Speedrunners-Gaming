@@ -17,7 +17,10 @@
 				</div>
 				<button type="submit">Log In!</button>
 			</form>
-			<p>Not yet a member? <a href="accountCreation.php">Click Here to Create an Account</a></p>
+			<div class='modal-links'>
+				<p>Not yet a member? <a href="accountCreation.php">Click Here to Create an Account</a></p>
+				<p>Temporary link for Admin Login <a href="adminHome.php">Click Here</a></p>
+			</div>
 		</div>
 	</div>
 HEREDOC;

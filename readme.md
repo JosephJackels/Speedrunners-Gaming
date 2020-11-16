@@ -72,7 +72,7 @@ This project utilizes:
 			- [x] ~~positioning~~
 			- [x] ~~borders~~
 		- [x] ~~Improved button styling~~
-	-Form Input Handling
+	- [ ] Form Input Handling
 		- [ ] Proper input check - empty, invalid etc.
 			- [x] ~~First Name~~
 			- [x] ~~Last Name~~

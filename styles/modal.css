@@ -38,7 +38,6 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 }
 .modal-content > h2 {
   flex: 1;
@@ -49,18 +48,18 @@
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  align-items: center;;
+  align-items: center;
 }
 .modal-form-inputs{
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
-.modal-content > p {
+.modal-content > .modal-links {
   flex: 1;
   color: var(--base-light-color);
 }
-.modal-content > p > a {
+.modal-content > .modal-links > p > a {
   color: var(--accent-light-color);
 }
 .modal-close {
