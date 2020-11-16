@@ -40,7 +40,7 @@
 	z-index: 0;
 }
 #page-header + *{
-	padding-top: 210px;
+	margin-top: 215px;
 }
 #page-title{
 	text-align: center;

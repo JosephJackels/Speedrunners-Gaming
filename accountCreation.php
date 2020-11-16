@@ -25,17 +25,28 @@
 	</div>
 	<div id="page-body">
 		<div id="account-creation-container">
-			<form autocomplete="off">
-				<label for="fname">First Name:
-					<input type="text" name="fname" placeholder="John" required pattern="[A-Za-z]+">
-				</label>
-				<label for="lname">Last Name:
-					<input type="text" name="lname" placeholder="Smith" required pattern="[A-Za-z]+">
-				</label>
-				<label for="email">Email Address:
-					<input type="email" name="email" placeholder="john.smith@email.com" required>
-				</label>
-				<div id="address-input-container">	
+			<h2>Account Creation</h2>
+			<form autocomplete="off" action="accountCreationPost.php" method="post">
+				
+				<div class='account-creation-input-container'>
+					<label for="fname">First Name:
+						<input type="text" name="fname" placeholder="John" required pattern="[A-Za-z]+">
+					</label>
+				</div>
+
+				<div class='account-creation-input-container'>
+					<label for="lname">Last Name:
+						<input type="text" name="lname" placeholder="Smith" required pattern="[A-Za-z]+">
+					</label>
+				</div>
+
+				<div class='account-creation-input-container'>
+					<label for="email">Email Address:
+						<input type="email" name="email" placeholder="john.smith@email.com" required>
+					</label>
+				</div>
+				
+				<div id="address-input-container" class="account-creation-input-container">	
 					<label for="address">Mailing Address:
 						<input type="text" name="address" placeholder="1234 Real Street" required pattern="[0-9]+\s(([0-9]+(st|nd|rd|th))|([A-Za-z]+))\s[A-Za-z]+(/s([Nn][EeWw]?|[Ss][EeWw]?|[Ee]|[Ww]|[Nn]orth(\s?(([Ww]est)|([Ee]ast)))?|[Ss]outh(\s?(([Ww]est)|([Ee]ast)))?|[Ee]ast|[Ww]est))?">
 						<!-- This Regex needs to be fixed-->
@@ -111,15 +122,25 @@
 						</select>
 					</label>
 				</div>
-				<label for="birthdate">Birth Date
-					<input type="date" name="birthdate" required>
-				</label>
-				<label for='password'>Password
-					<input type="password" name="password" id="password-input" oninput="checkPasswordInput(this)">
-				</label>
-				<label for="repeatPassword">Confirm Password
-					<input type="password" name="repeatPassword" id="password-confirm-input" oninput="checkPasswordInput(this)">
-				</label>
+
+				<div class='account-creation-input-container'>
+					<label for="birthdate">Birth Date
+						<input type="date" name="birthdate" required>
+					</label>
+				</div>
+
+				<div class='account-creation-input-container'>
+					<label for='password'>Password
+						<input required type="password" name="password" id="password-input" oninput="checkPasswordInput(this)">
+					</label>
+				</div>
+
+				<div class='account-creation-input-container'>
+					<label for="repeatPassword">Confirm Password
+						<input type="password" name="repeatPassword" id="password-confirm-input" oninput="checkPasswordInput(this)">
+					</label>
+				</div>
+				
 				<button type="submit">Create Account</button>
 			</form>
 		</div>
