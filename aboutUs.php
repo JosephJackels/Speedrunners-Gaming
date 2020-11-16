@@ -27,23 +27,19 @@
 		<div id="about-us-message">
 			<div class="message">
 				<h2 class="message-heading">Heading</h2>
-				<p class="message-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				<p class="message-content">Back in the early days in the 80's, both me and my friend Josh were impress of a 
+				smashing hit game called: "Supar Mario Bros" on the NES.  Begged our parents to buy for the two of us as kids
+				in any store that had the system and the game too.  We were both total game nerds at the time of our lives and 
+				we will never let that go for the both of us as we grew older till now.
 				</p>
 			</div>
 
 			<div class="message">
 				<h2 class="message-heading">Heading</h2>
-				<p class="message-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				<p class="message-content">As a kid, I always dreamed about starting a company that will always have games for
+				those who never own any money or possibly missed out an opportunity and I always feel bad for them!  As a dedicated business
+				owner and a gamer too, I decided to open up a private business that would deliver these wonderful games at a quick speed 
+				of delivery to any gamer in the world young and old.  After all, we never run out of time (if you get the reference.)!
 				</p>
 			</div>
 		</div>
