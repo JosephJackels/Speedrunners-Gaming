@@ -1,11 +1,39 @@
 <?php 
 /* update how these variables get their values once database and accounts are implemented*/
-	$accountFName = "John";
-	$accountLName = "Smith";
-	$accountEmail = "js@mail.com";
-	$accountAddress = "1234 Streetname Street City Zip";
-	$accountBirthDate = "1970-01-01";
+	$accountFName = 'none';
+	$accountLName = 'none';
+	$accountEmail = 'none';
+	$accountAddress = 'none';
+	$accountBirthDate = 'none';
+	$databaseCredentials = include('databaseCredentials.php');
 
+	//get current cust id from session/cookies?
+	$cust_id = 1;
+
+	$connection = mysqli_connect($databaseCredentials['servername'], $databaseCredentials['username'], $databaseCredentials['password'], $databaseCredentials['database']);
+	if(!$connection){
+		die('Connection failed ' . mysqli_connect_error());
+	}
+	$query = 'SELECT fname, lname, email, address, birthdate FROM CUSTOMER WHERE cust_id = ?';
+		if($statement = mysqli_prepare($connection, $query)){
+			mysqli_stmt_bind_param($statement, "i", $cust_id);
+			mysqli_stmt_execute($statement);
+			$result = mysqli_stmt_get_result($statement);
+			if(mysqli_num_rows($result) > 0){
+				while($row = mysqli_fetch_assoc($result)){
+					$accountFName = $row['fname'];
+					$accountLName = $row['lname'];
+					$accountEmail = $row['email'];
+					$accountAddress = $row['address'];
+					$accountBirthdate = $row['birthdate'];
+				}
+			}
+			mysqli_stmt_close($statement);
+		} else{
+			/// no account found
+			$accountFName = 'bad statement';
+		}
+	mysqli_close($connection);
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
@@ -31,34 +59,34 @@
 		<?php include 'pageParts/navbar.php'; ?>
 	</div>
 	<div id="page-body">
-		<form class="account-info-container" autocomplete="off" action="" method="post">
+		<form class="account-info-container" autocomplete="off" action="accountEdit.php" method="post">
 			
 			<h2 class="container-title">Account Info</h2>
 
 			<div class="account-info-values">
 				<div class="value-item">
 					<span class="value-label">First Name</span>
-					<input required type=text class="value-value" readonly placeholder='<?php echo $accountFName; ?>' pattern="[A-Za-z]+">
+					<input name='fname' required type=text class="value-value" readonly placeholder='<?php echo $accountFName; ?>' pattern="[A-Za-z]+">
 					<button type="button" class="value-edit" onclick="toggleEdit(this); return false;">Edit</button>
 				</div>
 				<div class="value-item">
 					<span class="value-label">Last Name</span>
-					<input required type=text class="value-value" readonly placeholder='<?php echo $accountLName; ?>' pattern="[A-Za-z]+">
+					<input name='lname' required type=text class="value-value" readonly placeholder='<?php echo $accountLName; ?>' pattern="[A-Za-z]+">
 					<button type="button" class="value-edit" onclick="toggleEdit(this); return false;">Edit</button>
 				</div>
 				<div class="value-item">
 					<span class="value-label">Email Address</span>
-					<input required type=email class="value-value" readonly placeholder=<?php echo  $accountEmail; ?>>
+					<input name='email' required type=email class="value-value" readonly placeholder=<?php echo  $accountEmail; ?>>
 					<button type="button" class="value-edit" onclick="toggleEdit(this); return false;">Edit</button>
 				</div>
 				<div class="value-item">
 					<span class="value-label">Mailing Address</span>
-					<input required type=text class="value-value" readonly placeholder='<?php echo "$accountAddress"; ?>' pattern="[0-9]+\s(([0-9]+(st|nd|rd|th))|([A-Za-z]+))\s[A-Za-z]+(/s([Nn][EeWw]?|[Ss][EeWw]?|[Ee]|[Ww]|[Nn]orth(\s?(([Ww]est)|([Ee]ast)))?|[Ss]outh(\s?(([Ww]est)|([Ee]ast)))?|[Ee]ast|[Ww]est))?\s[A-Za-z\s]+\s[0-9]{5}([- .]?[0-9]{5})?"><!-- Include state selector? This Regex is a mess but it worked the first time?-->
+					<input name='address' required type=text class="value-value" readonly placeholder='<?php echo "$accountAddress"; ?>' pattern="[0-9]+\s(([0-9]+(st|nd|rd|th))|([A-Za-z]+))\s[A-Za-z]+(/s([Nn][EeWw]?|[Ss][EeWw]?|[Ee]|[Ww]|[Nn]orth(\s?(([Ww]est)|([Ee]ast)))?|[Ss]outh(\s?(([Ww]est)|([Ee]ast)))?|[Ee]ast|[Ww]est))?\s[A-Za-z\s]+\s[0-9]{5}([- .]?[0-9]{5})?"><!-- Include state selector? This Regex is a mess but it worked the first time?-->
 					<button type="button" class="value-edit" onclick="toggleEdit(this); return false;">Edit</button>
 				</div>
 				<div class="value-item">
 					<span class="value-label">Birth Date</span>
-					<input required type=date class="value-value" readonly value=<?php echo $accountBirthDate; ?>>
+					<input name='birthdate' required type=date class="value-value" readonly value=<?php echo $accountBirthDate; ?>>
 					<button type="button" class="value-edit" onclick="toggleEdit(this); return false;">Edit</button>
 				</div>
 			</div>
