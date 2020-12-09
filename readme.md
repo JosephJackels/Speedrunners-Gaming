@@ -19,45 +19,45 @@ This project utilizes:
 ## TODO
 
 - [ ] Implement Test Database
-	- [ ] Game Table (a list of all games available - each game once)
-		- [ ] Get Game Data
-			- [ ] Titles
-			- [ ] Images
-			- [ ] Ratings
-			- [ ] Descriptions
-	- [ ] Game Instance Table (an instance 'physical' copy of a game, allows for multiple (or zero) copies of a game to exist)
-	- [ ] Customer Table (Customer data)
-	- [ ] Employee Table
-	- [ ] Delivery Employee Table
-	- [ ] Store Admin Table
+	- [x] ~~Game Table (a list of all games available - each game once)~~
+		- [x] ~~Get Game Data~~
+			- [x] ~~Titles~~
+			- [x] ~~Images~~
+			- [x] ~~Ratings~~
+			- [x] ~~Descriptions~~
+	- [x] ~~Game Instance Table (an instance 'physical' copy of a game, allows for multiple (or zero) copies of a game to exist)~~
+	- [x] ~~Customer Table (Customer data)~~
+	- [x] ~~Employee Table~~
+	- [x] ~~Delivery Employee Table~~
+	- [x] ~~Store Admin Table~~
 	- [ ] Stores
-	- [ ] Orders
-	- [ ] Order Contents
-	- [ ] Deliveries
+	- [x] ~~Orders~~
+	- [x] ~~Order Contents~~
+	- [x] ~~Deliveries~~
 
 - [ ] Main Page
 	- [ ] Search functionality
-	- [ ] Make login window only pop up if not logged in? AND/OR only on main page?
+	- [x] ~~Make login window only pop up if not logged in? AND/OR only on main page?~~
 		- [x] ~~Not pop up immediately~~
-		- [ ] Check if logged in or not
+		- [x] ~~Check if logged in or not~~
 	- [ ] Improve Color Scheme?
 		- [ ] contrast
 		- [ ] light/dark mode
 		- [ ] improve general color theme
 		- [ ] accent colors 'pop' without being distracting
 	- [ ] Game lists
-		- [ ] scroll when swiped?
+		- [x] ~~scroll when swiped?~~
 		- [ ] scroll when cursor is on far side?
 		- [ ] Information on hover?
 
-- [ ] 'About Us' page
-	- [ ] Create 'real' Content
+- [x] ~~'About Us' page~~
+	- [x] ~~Create 'real' Content~~
 	- [x] ~~Update Styling~~
 
 - [ ] Contact Page
-	- [x] ~~Update Styling~~
-		- [x] ~~Page Body Appearance~~
-		- [x] ~~Positioning of labels and buttons~~
+	- [ ] Update Styling
+		- [ ] Page Body Appearance
+		- [ ] Positioning of labels and buttons
 	- [x] ~~Form Input Handling~~
 		- [x] ~~Check for Empty/invalid inputs~~
 	- [ ] Form Output Processing
@@ -89,26 +89,26 @@ This project utilizes:
 			- [x] ~~Birth Date~~
 
 - [ ] Account Creation Page
-	- [x] ~~Styling~~
+	- [ ] Styling
 	- [ ] Form Input Handling
 		- [ ] Mailing Address regex needs improvement/fixing
 
 - [ ] Admin Pages
 	- [ ] Edit/Add/Remove Employee Page
-		- [ ] Structure
+		- [x] ~~Structure~~
 		- [ ] Style
-		- [ ] Functionality
-			- [ ] Form Handling
-			- [ ] Integrate with database
+		- [x] ~~Functionality~~
+			- [x] ~~Form Handling~~
+			- [x] ~~Integrate with database~~
 	- [ ] Orders and Deliveries Page
-		- [ ] Structure
+		- [x] ~~Structure~~
 		- [ ] Style
-		- [ ] Functionality
-			- [ ] Form Handling
-			- [ ] Integrate with database
+		- [x] ~~Functionality~~
+			- [x] ~~Form Handling~~
+			- [x] ~~Integrate with database~~
 	- [ ] Edit/Add/Remove Game Page
-		- [ ] Structure
+		- [x] ~~Structure~~
 		- [ ] Style
-		- [ ] Functionality
-			- [ ] Form Handling
-			- [ ] Integrate with database
+		- [x] ~~Functionality~~
+			- [x] ~~Form Handling~~
+			- [x] ~~Integrate with database~~
